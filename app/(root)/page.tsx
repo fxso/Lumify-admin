@@ -1,13 +1,25 @@
 "use client";
 
-import { Modal } from '@/components/interface/modal';
+import { useStoreModal } from "@/hooks/useStoreModal";
+import { useEffect } from "react";
+
+
 
 export default function Home() {
+
+    //states
+    const onOpen = useStoreModal((state) => state.onOpen);
+    const isOpen = useStoreModal((state) => state.isOpen);
+
+    useEffect(() => {
+        if (!isOpen) {
+            onOpen();
+        }
+    }, [isOpen, onOpen]);
+
   return (
-    <div>
-      <Modal title='Test' description='test' isOpen onClose={() => {}}>
-        Children
-      </Modal>
+    <div className='p-4'>
+      Page
     </div>
   )
 }

@@ -6,7 +6,7 @@ interface useStoreModalInterface {
 	onClose: () => void;
   }
 
-  export const useProModal = create<useStoreModalInterface>((set) => ({
+  export const useStoreModal = create<useStoreModalInterface>((set) => ({
 	isOpen: false,
 	onOpen: () => set({ isOpen: true }),
 	onClose: () => set({ isOpen: false }),

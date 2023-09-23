@@ -1,9 +1,13 @@
-import { UserButton } from '@clerk/nextjs'
+"use client";
+
+import { Modal } from '@/components/interface/modal';
 
 export default function Home() {
   return (
     <div>
-      <UserButton afterSignOutUrl="/"/>
+      <Modal title='Test' description='test' isOpen onClose={() => {}}>
+        Children
+      </Modal>
     </div>
   )
 }

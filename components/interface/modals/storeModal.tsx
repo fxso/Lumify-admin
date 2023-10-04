@@ -50,7 +50,7 @@ export const StoreModal = () => {
                                     <FormItem>
                                         <FormLabel>Name</FormLabel>
                                         <FormControl>
-                                            <Input disabled={loading} placeholder="Shop" {...field} />
+                                            <Input disabled={loading} placeholder="Lumify" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
